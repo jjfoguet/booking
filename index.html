@@ -84,18 +84,29 @@
 <div class="container">
     <h2>Interactive Map of North Argentina</h2>
     <p>
-        This article provides an interactive map visualization showcasing the most frequent foreign visitors 
-        in Northern Argentina. Explore the data to uncover fascinating patterns and insights about tourism in the region.
+    In addition to other spatial tourism databases ( 
+    <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and 
+    <a href="https://developers.google.com/maps/documentation/places/web-service" target="_blank">Google Maps</a> APIs), 
+    I extracted, from a popular web platform, the coordinates and reviews of hotels in Northwest Argentina. 
+    These reviews provide valuable insights: in one hand they reveal the nationality of the reviewers, 
+    which helps in creating flow maps; on the other hand, their quantity highlights the level of interest 
+    in specific geographic locations.
     </p>
-
+    <p>
+    The extraction process involves two steps. First, I query a 'hidden' endpoint that powers the webmap 
+    associated with each hotel. This requires providing the coordinates of a bounding box of interest as parameters. 
+    From this request, I retrieve the establishment ID, the number of reviews, and other details 
+    that are then used to make a second request to the 'hidden' reviews API for each hotel. 
+    You can check out the code <a href="https://github.com/your-repo-link" target="_blank">here</a>.
+</p>
     <div class="map-container">
         <!-- Replace 'your-map-url' with the actual GitHub URL of your Folium map file -->
         <iframe src="https://jjfoguet.github.io/booking/mapa.html" title="Interactive Map"></iframe>
     </div>
 
     <p>
-        The map above is dynamically rendered using the Folium library, allowing users to interact with the visualization 
-        directly within their browser. The data represents aggregated observations and highlights key trends in visitor demographics.
+        The map above is dynamically rendered using the Folium library.
+        The data represents aggregated observations and highlights key trends in visitor demographics.
     </p>
 </div>
 

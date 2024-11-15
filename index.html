@@ -3,61 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mapeando cosas</title>
+    <title>Interactive Map Article</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            color: #333;
+            background-color: #fafafa;
         }
+
         header {
+            background-color: #fff;
             padding: 20px;
-            background-color: #f8f9fa;
-            width: 100%;
             border-bottom: 1px solid #ddd;
         }
-        h1 {
-            font-size: 2em;
-            color: #333;
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            color: #222;
         }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
         p {
-            font-size: 1.1em;
-            margin: 20px;
-            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
         }
+
         .map-container {
-            margin: 20px;
-            width: 80%;
-            height: 500px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            margin: 40px 0;
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            height: 0;
             overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #eaeaea;
         }
-        iframe {
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #ddd;
+            background-color: #fff;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>spatial data. web scrapping booking</h1>
+    <h1>Exploring Geographic Insights</h1>
 </header>
 
-<main>
-    <p>metodo para extraer de booking coordenadas y comentarios asociados a cada hotel.</p>
+<div class="container">
+    <h2>Interactive Map of North Argentina</h2>
+    <p>
+        This article provides an interactive map visualization showcasing the most frequent foreign visitors 
+        in Northern Argentina. Explore the data to uncover fascinating patterns and insights about tourism in the region.
+    </p>
 
     <div class="map-container">
         <!-- Replace 'your-map-url' with the actual GitHub URL of your Folium map file -->
-        <iframe src="https://jjfoguet.github.io/booking/mapa.html" title="Embedded Folium Map"></iframe>
+        <iframe src="https://jjfoguet.github.io/bokking/mapa.html" title="Interactive Map"></iframe>
     </div>
-</main>
+
+    <p>
+        The map above is dynamically rendered using the Folium library, allowing users to interact with the visualization 
+        directly within their browser. The data represents aggregated observations and highlights key trends in visitor demographics.
+    </p>
+</div>
+
+<footer>
+    <p>© 2024 by Javier Foguet. Built with Folium and GitHub Pages.</p>
+</footer>
 
 </body>
 </html>
+
